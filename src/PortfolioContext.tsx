@@ -38,6 +38,26 @@ export const initialProfessionalWorks: ProfessionalWork[] = [
     imgUrl: "src/assets/save-and-share-dacr.png",
   },
   {
+    title: "Scoring Algorithm for Work Styles Quiz",
+    description: [
+      "Sole author of scoring algorithm code for Humu's Work Styles Quiz",
+      "Collaborated with Data Science team to align on expectations and testing",
+      "Wrote extensive unit test suite",
+      "Rigorously tested code by comparing unit test results to  Data Science-created R script",
+    ],
+    imgUrl: "src/assets/work-style-quiz-2.png",
+  },
+  {
+    title: "User-Enterable Fields feature (PROJECT LEAD)",
+    description: [
+      "Feature gave users the ability to edit/ add to their profiles in Humu’s Coach surface",
+      "Led a team of 5 new engineers (all joining within 4 months of project start)",
+      "Mentored engineers on our codebase and stack",
+      "Worked with PMs using OKR framework to achieve goals",
+    ],
+    imgUrl: "src/assets/user-enterable-fields.png",
+  },
+  {
     title: "1:1 Agenda Digest (PROJECT LEAD)",
     description: [
       "Was the sole engineer to do pre-work for overhauling the email rendering system in our codebase",
@@ -65,26 +85,6 @@ export const initialProfessionalWorks: ProfessionalWork[] = [
       "Mentored engineers on Selenium Python library for end-to-end testing",
       "Delivered Tech Spec and Jira tasks within 2 days of receiving PRD due to customer-related time constraints",
     ],
-  },
-  {
-    title: "Scoring Algorithm for Work Styles Quiz",
-    description: [
-      "Sole author of scoring algorithm code for Humu's Work Styles Quiz",
-      "Collaborated with Data Science team to align on expectations and testing",
-      "Wrote extensive unit test suite",
-      "Rigorously tested code by comparing unit test results to  Data Science-created R script",
-    ],
-    imgUrl: "src/assets/work-style-quiz-2.png",
-  },
-  {
-    title: "User-Enterable Fields feature (PROJECT LEAD)",
-    description: [
-      "Feature gave users the ability to edit/ add to their profiles in Humu’s Coach surface",
-      "Led a team of 5 new engineers (all joining within 4 months of project start)",
-      "Mentored engineers on our codebase and stack",
-      "Worked with PMs using OKR framework to achieve goals",
-    ],
-    imgUrl: "src/assets/user-enterable-fields.png",
   },
 ];
 export const PortfolioContext: Context<PortfolioData | null> =

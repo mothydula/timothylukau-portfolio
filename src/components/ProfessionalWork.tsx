@@ -13,12 +13,17 @@ const Project: React.FC<{
   imgUrl?: string;
 }> = ({ title, description, imgUrl }) => {
   return (
-    <Stack>
-      <Headline size="large" fluid className="px-0">
+    <Stack className="border-solid border-black border-2 px-4 py-4 rounded">
+      <Headline size="large" fluid className="px-0 pb-4">
         {title}
       </Headline>
       <Row>
-        {imgUrl & <Image />}
+        {imgUrl !== undefined ? (
+          <Col lg={4}>
+            <Image src={imgUrl} height={300} width={300} />
+          </Col>
+        ) : null}
+
         <Col>
           <Body>
             <ul>
@@ -38,7 +43,7 @@ const ProfessionalWork: React.FC = () => {
   const professionalWorks: ProfessionWorkType[] =
     context?.professionalWorks || [];
   return (
-    <Stack>
+    <Stack className="mb-4" gap={4}>
       <Headline className="px-0" size="xxxxlarge">
         PROFESSIONAL WORK
       </Headline>
