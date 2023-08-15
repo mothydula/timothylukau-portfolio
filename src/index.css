@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: ParadoxFont;
+  src: url(assets/Paradox.woff);
+}
+
+@font-face {
+  font-family: AkiraFont;
+  src: url(assets/Akira.woff);
+}
+
+@font-face {
+  font-family: CatchyeFont;
+  src: url(assets/Catchye.woff);
+}
+
+@font-face {
+  font-family: OuterSansFont;
+  src: url(assets/outer-sans.woff);
+}
+
+body {
+  font-family: CatchyeFont;
+}
