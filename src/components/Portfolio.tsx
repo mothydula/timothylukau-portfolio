@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Stack, Container, Row, Col } from "react-bootstrap";
 import { Link } from "@mui/material";
 import Headline from "../typography/Headline";
+import { PortfolioContext, Project } from "../PortfolioContext";
 
 type PortfolioRowProps = {
   title: string;
@@ -63,27 +64,20 @@ const PortfolioRow: React.FC<PortfolioRowProps> = ({
 };
 
 const Portfolio: React.FC = () => {
+  const context = useContext(PortfolioContext);
+  const projectData: Project[] = context?.projects || [];
   return (
     <Stack gap={3}>
       <Headline size="xxxxlarge">PORTFOLIO</Headline>
-      <PortfolioRow
-        title="SOONSPINS"
-        description="Platform for burgeoning artists in the southwest united states and beyond"
-        link="https://soonspins.com"
-        linkText="Check out soonspins"
-      />
-      <PortfolioRow
-        title="ENGRAVES"
-        description="Collective of artists dedicated to increasing cultural awareness and collaboration in Tuscon, Arizona"
-        link="https://soonspins.com"
-        linkText="Check out soonspins"
-      />
-      <PortfolioRow
-        title="MUSICAL CATALOG"
-        description="Musical production catalog"
-        link="https://soundcloud.com/mothydula"
-        linkText="Check out mothy dula catalog"
-      />
+      {projectData.map((project: Project, index: number) => (
+        <PortfolioRow
+          key={`${index}_${project.link}`}
+          title={project.title}
+          description={project.description}
+          link={project.link}
+          linkText={project.linkText}
+        />
+      ))}
     </Stack>
   );
 };

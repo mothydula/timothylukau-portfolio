@@ -3,6 +3,7 @@ import React, { Context, createContext } from "react";
 type PortfolioData = {
   tools: Tool[];
   professionalWorks: ProfessionalWork[];
+  projects: Project[];
 };
 
 export type Tool = {
@@ -15,6 +16,44 @@ export type ProfessionalWork = {
   description: string[];
   imgUrl?: string;
 };
+
+export type Project = {
+  title: string;
+  description: string;
+  link: string;
+  linkText: string;
+};
+
+export const initialProjects: Project[] = [
+  {
+    title: "SOONSPINS",
+    description:
+      "Platform for burgeoning artists in the southwest united states and beyond",
+    link: "https://soonspins.com",
+    linkText: "Check out soonspins",
+  },
+  {
+    title: "ENGRAVES",
+    description:
+      "Collective of artists dedicated to increasing cultural awareness and collaboration in Tuscon, Arizona. Website and technical platform developed by yours truly. Creative direction and programming is a collaboration with DJ KPMADMAN",
+    link: "https://wildcat.arizona.edu/117904/arts/waves-in-the-desert/",
+    linkText: "Read more",
+  },
+  {
+    title: "MUSICAL CATALOG",
+    description:
+      "I work on making beats for my friends as well as standalone musical compositions.",
+    link: "https://soundcloud.com/mothydula",
+    linkText: "Check out my catalog",
+  },
+  {
+    title: "SOUNDS OF MELANIN",
+    description:
+      "A VR/musical project that I worked on with talented artists in Tucson, Arizona",
+    link: "https://www.facebook.com/tenwestfest/videos/403827213639827/",
+    linkText: "WATCH TO LEARN MORE",
+  },
+];
 
 export const initialTools: Tool[] = [
   { title: "Python", imgUrl: "src/assets/python-logo.png" },
@@ -87,5 +126,6 @@ export const initialProfessionalWorks: ProfessionalWork[] = [
     ],
   },
 ];
+
 export const PortfolioContext: Context<PortfolioData | null> =
   createContext<PortfolioData | null>(null);

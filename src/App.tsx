@@ -4,6 +4,7 @@ import {
   PortfolioContext,
   initialTools,
   initialProfessionalWorks,
+  initialProjects,
 } from "./PortfolioContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Portfolio from "./components/Portfolio";
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         value={{
           tools: initialTools,
           professionalWorks: initialProfessionalWorks,
+          projects: initialProjects,
         }}
       >
         <Header />

@@ -6,12 +6,20 @@ import {
   PortfolioContext,
   ProfessionalWork as ProfessionWorkType,
 } from "../PortfolioContext";
+import styled from "styled-components";
 
 const Project: React.FC<{
   title: string;
   description: string[];
   imgUrl?: string;
 }> = ({ title, description, imgUrl }) => {
+  const List = styled.ul`
+    li {
+      display: list-item;
+      list-style-type: square;
+    }
+  `;
+
   return (
     <Stack className="border-solid border-black border-2 px-4 py-4 rounded">
       <Headline size="large" fluid className="px-0 pb-4">
@@ -26,11 +34,11 @@ const Project: React.FC<{
 
         <Col>
           <Body>
-            <ul>
+            <List>
               {description.map((text: string) => (
-                <li>&#x2022; {text}</li>
+                <li>{text}</li>
               ))}
-            </ul>
+            </List>
           </Body>
         </Col>
       </Row>
