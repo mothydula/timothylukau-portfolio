@@ -18,7 +18,10 @@ const Header: React.FC = () => {
   return (
     <StyledNavbar expand="lg" className="py-6">
       <Container>
-        <Navbar.Brand className="hover-zoom" href="/projects">
+        <Navbar.Brand
+          className="hover-zoom"
+          href="https://linkedin.com/in/timlukau"
+        >
           TIM
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
