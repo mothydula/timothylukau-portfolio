@@ -21,6 +21,7 @@ const Header: React.FC = () => {
         <Navbar.Brand
           className="hover-zoom"
           href="https://linkedin.com/in/timlukau"
+          target="_blank"
         >
           TIM
         </Navbar.Brand>
