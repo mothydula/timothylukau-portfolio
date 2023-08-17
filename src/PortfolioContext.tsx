@@ -1,4 +1,18 @@
-import React, { Context, createContext } from "react";
+import { Context, createContext } from "react";
+import pythonLogo from "./assets/python-logo.png";
+import typescriptLogo from "./assets/ts-logo.png";
+import reactLogo from "./assets/react-icon.png";
+import postgresLogo from "./assets/postgresql-logo.png";
+import apolloLogo from "./assets/apollo-gql-logo.png";
+import mySQLLogo from "./assets/mysql-logo.png";
+import elasticSearchLogo from "./assets/elasticsearch-logo.png";
+import redisLogo from "./assets/redis-logo.png";
+import photoshopLogo from "./assets/ps-logo.png";
+import flStudioLogo from "./assets/fl-fruit-logo.png";
+import figmaImage from "./assets/figma-logo-2.png";
+import userEnterableFieldsImage from "./assets/user-enterable-fields.png";
+import workStylesQuizImage from "./assets/work-style-quiz-2.png";
+import dacrImage from "./assets/save-and-share-dacr.png";
 
 type PortfolioData = {
   tools: Tool[];
@@ -28,14 +42,14 @@ export const initialProjects: Project[] = [
   {
     title: "SOONSPINS",
     description:
-      "Platform for burgeoning artists in the southwest united states and beyond",
+      "Platform for burgeoning artists/DJs in the southwest united states and beyond.  Website and technical platform developed by yours truly. Creative direction and programming is a collaboration with DJ KPMADMAN",
     link: "https://soonspins.com",
     linkText: "Check out soonspins",
   },
   {
     title: "ENGRAVES",
     description:
-      "Collective of artists dedicated to increasing cultural awareness and collaboration in Tuscon, Arizona. Website and technical platform developed by yours truly. Creative direction and programming is a collaboration with DJ KPMADMAN",
+      "Collective of artists dedicated to increasing cultural awareness and collaboration in Tuscon, Arizona.",
     link: "https://wildcat.arizona.edu/117904/arts/waves-in-the-desert/",
     linkText: "Read more",
   },
@@ -56,13 +70,17 @@ export const initialProjects: Project[] = [
 ];
 
 export const initialTools: Tool[] = [
-  { title: "Python", imgUrl: "src/assets/python-logo.png" },
-  { title: "Typescript", imgUrl: "src/assets/ts-logo.png" },
-  { title: "React", imgUrl: "src/assets/react-icon.png" },
-  { title: "PostgreSQL", imgUrl: "src/assets/postgresql-logo.png" },
-  { title: "Apollo GQL", imgUrl: "src/assets/apollo-gql-logo.png" },
-  { title: "MySQL", imgUrl: "src/assets/mysql-logo.png" },
-  { title: "Elasticsearch", imgUrl: "src/assets/elasticsearch-logo.png" },
+  { title: "Python", imgUrl: pythonLogo },
+  { title: "Typescript", imgUrl: typescriptLogo },
+  { title: "React", imgUrl: reactLogo },
+  { title: "PostgreSQL", imgUrl: postgresLogo },
+  { title: "Apollo GQL", imgUrl: apolloLogo },
+  { title: "MySQL", imgUrl: mySQLLogo },
+  { title: "Elasticsearch", imgUrl: elasticSearchLogo },
+  { title: "Redis", imgUrl: redisLogo },
+  { title: "Figma", imgUrl: figmaImage },
+  { title: "Photoshop", imgUrl: photoshopLogo },
+  { title: "FL Studio", imgUrl: flStudioLogo },
 ];
 
 export const initialProfessionalWorks: ProfessionalWork[] = [
@@ -74,7 +92,7 @@ export const initialProfessionalWorks: ProfessionalWork[] = [
       "Worked on countless UI state descriptions with Design to make sure the mocks aligned with the React paradigm",
       "Built out multiple microservices in Python to manage Access Control Lists as well as saved and shared reports",
     ],
-    imgUrl: "src/assets/save-and-share-dacr.png",
+    imgUrl: dacrImage,
   },
   {
     title: "Scoring Algorithm for Work Styles Quiz",
@@ -84,7 +102,7 @@ export const initialProfessionalWorks: ProfessionalWork[] = [
       "Wrote extensive unit test suite",
       "Rigorously tested code by comparing unit test results to  Data Science-created R script",
     ],
-    imgUrl: "src/assets/work-style-quiz-2.png",
+    imgUrl: workStylesQuizImage,
   },
   {
     title: "User-Enterable Fields feature (PROJECT LEAD)",
@@ -94,7 +112,7 @@ export const initialProfessionalWorks: ProfessionalWork[] = [
       "Mentored engineers on our codebase and stack",
       "Worked with PMs using OKR framework to achieve goals",
     ],
-    imgUrl: "src/assets/user-enterable-fields.png",
+    imgUrl: userEnterableFieldsImage,
   },
   {
     title: "1:1 Agenda Digest (PROJECT LEAD)",

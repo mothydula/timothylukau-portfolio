@@ -21,7 +21,7 @@ const Project: React.FC<{
   `;
 
   return (
-    <Stack className="border-solid border-black border-2 px-4 py-4 rounded">
+    <Stack className="border-solid border-black border-2 px-4 py-4 rounded hover-zoom">
       <Headline size="large" fluid className="px-0 pb-4">
         {title}
       </Headline>

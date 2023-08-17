@@ -7,12 +7,20 @@ import styled from "styled-components";
 const Header: React.FC = () => {
   const StyledNavbar = styled(Navbar)`
     font-family: AkiraFont;
+    a {
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   `;
 
   return (
     <StyledNavbar expand="lg" className="py-6">
       <Container>
-        <Navbar.Brand href="#home">TIM</Navbar.Brand>
+        <Navbar.Brand className="hover-zoom" href="/projects">
+          TIM
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

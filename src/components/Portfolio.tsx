@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { Stack, Container, Row, Col } from "react-bootstrap";
-import { Link } from "@mui/material";
 import Headline from "../typography/Headline";
 import { PortfolioContext, Project } from "../PortfolioContext";
 
@@ -26,6 +25,8 @@ const PortfolioRowContainer = styled(Container)`
 
 const StyledDescriptionCol = styled(Col)`
   font-family: AkiraFont;
+  a {
+  }
 `;
 
 const Description: React.FC<{ text: string }> = ({ text }) => {
@@ -36,7 +37,11 @@ const PortfolioLink: React.FC<{ url: string; text: string }> = ({
   url,
   text,
 }) => {
-  return <Link href={url}>{text}</Link>;
+  return (
+    <a href={url} target="_blank" className="text-amaranth-purple">
+      {text}
+    </a>
+  );
 };
 
 const PortfolioRow: React.FC<PortfolioRowProps> = ({
@@ -44,10 +49,9 @@ const PortfolioRow: React.FC<PortfolioRowProps> = ({
   description,
   link,
   linkText,
-  imageUrl,
 }) => {
   return (
-    <PortfolioRowContainer fluid>
+    <PortfolioRowContainer fluid className="hover:bg-butterscotch hover-zoom">
       <Row>
         <Col className="text-4xl font-extrabold">{title}</Col>
         <StyledDescriptionCol>
@@ -68,7 +72,7 @@ const Portfolio: React.FC = () => {
   const projectData: Project[] = context?.projects || [];
   return (
     <Stack gap={3}>
-      <Headline size="xxxxlarge">PORTFOLIO</Headline>
+      <Headline size="xxxxlarge">PROJECTS</Headline>
       {projectData.map((project: Project, index: number) => (
         <PortfolioRow
           key={`${index}_${project.link}`}

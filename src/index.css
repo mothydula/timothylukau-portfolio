@@ -24,4 +24,12 @@
 
 body {
   font-family: CatchyeFont;
+  background-color: lemonchiffon;
+}
+
+.hover-zoom {
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
 }

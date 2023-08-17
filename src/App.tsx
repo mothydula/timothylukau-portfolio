@@ -9,7 +9,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import Portfolio from "./components/Portfolio";
 import styled from "styled-components";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Tools from "./components/Tools";
 import ProfessionalWork from "./components/ProfessionalWork";
 
@@ -27,6 +27,7 @@ const App: React.FC = () => {
       >
         <Header />
         <Routes>
+          <Route path="*" element={<Navigate to="/projects" replace />} />
           <Route path="/projects" element={<Portfolio />} />
           <Route path="/tools" element={<Tools />} />
           <Route path="/professional-work" element={<ProfessionalWork />} />

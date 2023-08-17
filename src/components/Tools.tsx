@@ -13,7 +13,7 @@ const ToolRow: React.FC<{ title: string; imgUrl: string }> = ({
     border-radius: 4px;
   `;
   return (
-    <StyledContainer fluid>
+    <StyledContainer fluid className="hover:bg-celadon hover-zoom">
       <Row className="justify-content-md-center py-6 px-6">
         <Col sm={2}>
           <Image src={imgUrl} height={100} width={100} />
@@ -28,9 +28,9 @@ const ToolRow: React.FC<{ title: string; imgUrl: string }> = ({
 
 const Tools: React.FC = () => {
   const data = useContext(PortfolioContext);
-  const tools = data.tools;
+  const tools: Tool[] = data?.tools || [];
   return (
-    <Stack gap={3}>
+    <Stack gap={3} className="mb-4">
       <Headline size="xxxxlarge">TOOLS</Headline>
       {tools.map((tool: Tool, index: number) => (
         <ToolRow
